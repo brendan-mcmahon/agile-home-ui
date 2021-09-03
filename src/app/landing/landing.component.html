@@ -1,0 +1,8 @@
+<button *ngFor="let house of houses" (click)="setHouse(house)">{{house.name}}</button>
+
+<div *ngIf="!houses || houses.length === 0">
+  No houses!
+  <p>Create one here by giving it a name:</p>
+  <input type="text" [(ngModel)]="newHouse.name"/>
+  <button (click)="createHouse()">Create</button>
+</div>
